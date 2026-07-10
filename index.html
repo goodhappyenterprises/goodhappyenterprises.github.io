@@ -21,6 +21,34 @@
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; scroll-behavior: smooth; }
         body { background-color: #030a14; color: var(--text-light); overflow-x: hidden; }
 
+        /* ==================== 1. CUSTOM 0.01s BLUE-RED PRELOADER CSS ==================== */
+        #preloader {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+            background-color: #ffffff; /* Clean White Canvas */
+            display: flex; justify-content: center; align-items: center;
+            z-index: 999999; transition: opacity 0.1s ease, visibility 0.1s ease;
+        }
+        .preloader-g {
+            font-family: 'Playfair Display', serif; font-size: 5.5rem; font-weight: 800;
+            background: linear-gradient(135deg, #0052d4, #ff0000); /* Premium Blue to Red Gradient */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative; display: inline-block;
+        }
+        .preloader-g::after {
+            content: ''; position: absolute; width: 115%; height: 115%;
+            top: -7.5%; left: -7.5%; border-radius: 50%;
+            border: 5px solid transparent; 
+            border-top-color: #0052d4; /* Blue Ring Segment */
+            border-bottom-color: #ff0000; /* Red Ring Segment */
+            animation: spinCircle 0.8s linear infinite;
+        }
+        @keyframes spinCircle {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        /* ==================== PRELOADER CSS END ==================== */
+
         /* 100% Copy Sticky Premium Header */
         .navbar { 
             position: fixed; top: 0; left: 0; width: 100%; 
@@ -142,6 +170,12 @@
 </head>
 <body>
 
+    <!-- ==================== 2. PRELOADER HTML ELEMENT ==================== -->
+    <div id="preloader">
+        <div class="preloader-g">G</div>
+    </div>
+    <!-- ==================== PRELOADER HTML END ==================== -->
+
     <!-- Exact Navigation bar Architecture -->
     <nav class="navbar">
         <div class="logo">Good Happy Enterprises</div>
@@ -227,7 +261,7 @@
 
             <div class="detail-block">
                 <h3>6, 7 & 8. RCC, AC और ब्रिक कोर कटिंग (Advanced Engineering)</h3>
-                <p>यह हमारी सबसे बड़ी तकनीकी विशेषता है। अक्सर प्लंबिंग, इलेक्ट्रिकल या एसी पाइप के लिए लोग दीवारों को हथौड़े और छेनी से तोड़ते हैं, जिससे दीवार में दरारें आ जाती हैं और स्ट्रक्चर कमजोर होता है। हमारी 'कोर कटिंग' तकनीक से हम कंक्रीट के पिलर, स्लैब (RCC Cutting), एसी के पाइप होल (AC Core Cutting) और ईंटों की दीवारों (Brick Core Cutting) में बिना किसी वाइब्रेशन के बिल्कुल गोल, साफ और सटीक होल करते हैं। यह तकनीक स्ट्रक्चर को पूरी तरह सुरक्षित रखती है और काम में जबरदस्त फिनिशिंग लाती है।</p>
+                <p>यह हमारी सबसे बड़ी तकनीकी विशेषता है। अक्सर प्लंबिंग, इलेक्ट्रिकल या एसी पाइप के लिए लोग दीवारों को हथौड़े और छेनी से तोड़ते हैं, जिससे दीवार में दरारें आ जाती हैं और स्ट्रक्चर कमजोर होता है। हमारी 'कोर कटिंग' तकनीक से हम कंक्रीट के पिलर, स्लैब (RCC Cutting), एसी के पाइप होल (AC Core Cutting) और ईंटों की दीवारों (Brick Core Cutting) में बिना किसी वाइब्रेशन के बिल्कुल gol, साफ और सटीक होल करते हैं। यह तकनीक स्ट्रक्चर को पूरी तरह सुरक्षित रखती है और काम में जबरदस्त फिनिशिंग लाती है।</p>
             </div>
         </section>
 
@@ -252,11 +286,23 @@
         <p>&copy; 2019 <span>Good Happy Enterprises</span> | All Rights Reserved.</p>
     </footer>
 
-    <!-- Interactive Navigation Scripts -->
+    <!-- ==================== 3. FIXED 0.01s PRELOADER JAVASCRIPT ==================== -->
     <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(() => {
+                const preloader = document.getElementById('preloader');
+                if (preloader) {
+                    preloader.style.opacity = '0';
+                    setTimeout(() => {
+                        preloader.style.visibility = 'hidden';
+                    }, 50); // fast wrap up fading
+                }
+            }, 10); // 10 milliseconds = Exactly 0.01 Second
+        });
+
         function openNav() { document.getElementById("mySideMenu").style.right = "0"; }
         function closeNav() { document.getElementById("mySideMenu").style.right = "-100%"; }
     </script>
 </body>
-                    </html>
-    
+    </html>
+            
