@@ -3,92 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Good Happy Enterprises | Building & Property Solutions</title>
+    <title>Good Happy Enterprises</title>
+    <!-- Google Fonts for stylish look -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-        body { background-color: #f4f7f6; color: #333; line-height: 1.6; }
-        
-        /* Header */
-        header { background: #2c3e50; color: white; text-align: center; padding: 60px 20px; }
-        header h1 { font-size: 2.8rem; margin-bottom: 10px; }
-        header p { font-size: 1.2rem; color: #bdc3c7; }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; }
+        body { background-color: #f0f2f5; color: #333; line-height: 1.6; animation: fadeIn 1.5s ease; }
 
-        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
+        /* Animation Keyframes */
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes slideUp { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
 
-        /* Services Grid */
-        .services-section { margin-bottom: 40px; }
-        .section-title { text-align: center; margin-bottom: 30px; color: #2c3e50; font-size: 2rem; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-        
-        .card { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease; }
-        .card:hover { transform: translateY(-10px); }
-        .card h3 { color: #27ae60; margin-bottom: 10px; font-size: 1.3rem; }
-        .card p { font-size: 0.95rem; color: #666; }
-        .icon { font-size: 2rem; margin-bottom: 15px; display: block; }
+        /* Stylish Header with Gradient */
+        header { 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+            color: white; 
+            text-align: center; 
+            padding: 80px 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        header h1 { font-size: 3rem; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 2px; }
+        header p { font-size: 1.2rem; color: #e0e0e0; }
 
-        /* Contact Section */
-        .contact-card { background: #fff; padding: 30px; border-radius: 10px; border-top: 5px solid #27ae60; }
-        .contact-info { font-size: 1.1rem; margin-top: 10px; }
-        .contact-info p { margin-bottom: 8px; }
+        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; animation: slideUp 1s ease-out; }
+
+        /* Colorful Service Cards */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
         
-        footer { text-align: center; padding: 40px; background: #2c3e50; color: white; margin-top: 40px; }
+        .card { 
+            background: white; padding: 30px; border-radius: 20px; 
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08); 
+            transition: all 0.4s ease; text-align: center;
+        }
+        .card:hover { transform: scale(1.05); box-shadow: 0 20px 30px rgba(0,0,0,0.15); }
+        .card h3 { color: #764ba2; margin-bottom: 15px; font-size: 1.4rem; }
+        .icon { font-size: 3rem; margin-bottom: 15px; display: block; }
+
+        /* Stylish Contact Card */
+        .contact-card { background: white; padding: 40px; border-radius: 20px; margin-top: 50px; text-align: center; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .contact-info { font-size: 1.2rem; }
+        .contact-info a { color: #764ba2; text-decoration: none; font-weight: 600; transition: 0.3s; }
+        .contact-info a:hover { color: #667eea; }
+
+        footer { text-align: center; padding: 40px; color: #777; font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
     <header>
         <h1>Good Happy Enterprises</h1>
-        <p>Your Trusted Partner for Quality Construction & Property Solutions</p>
+        <p>Premium Building & Property Solutions</p>
     </header>
 
     <div class="container">
+        <h2 style="text-align: center; font-size: 2.2rem; color: #333;">Hamari Sewayein</h2>
         
-        <!-- Services Section -->
-        <section class="services-section">
-            <h2 class="section-title">Hamari Sewayein</h2>
-            <div class="grid">
-                <div class="card">
-                    <span class="icon">🏗️</span>
-                    <h3>Building Construction & Developers</h3>
-                    <p>Hum quality materials aur modern engineering ke sath mazboot ghar aur commercial structures banate hain.</p>
-                </div>
-                <div class="card">
-                    <span class="icon">🎨</span>
-                    <h3>House Painting</h3>
-                    <p>Aapke ghar ko naya aur aakarshak look dene ke liye premium painting aur wall finishing services.</p>
-                </div>
-                <div class="card">
-                    <span class="icon">📹</span>
-                    <h3>CCTV Camera Installation</h3>
-                    <p>High-definition surveillance solutions taaki aapka ghar aur office har waqt surakshit rahe.</p>
-                </div>
-                <div class="card">
-                    <span class="icon">🛋️</span>
-                    <h3>Interior Design</h3>
-                    <p>Space optimization aur modern aesthetics ke sath aapke interiors ko stylish aur functional banate hain.</p>
-                </div>
-                <div class="card">
-                    <span class="icon">🧯</span>
-                    <h3>Fire Safety Solutions</h3>
-                    <p>Suraksha sabse pehle! Hum fire alarm aur safety equipment ka professional installation karte hain.</p>
-                </div>
-            </div>
-        </section>
+        <div class="grid">
+            <div class="card"><span class="icon">🏗️</span><h3>Construction & Developers</h3><p>Quality construction with modern engineering.</p></div>
+            <div class="card"><span class="icon">🎨</span><h3>House Painting</h3><p>Premium finish for vibrant home looks.</p></div>
+            <div class="card"><span class="icon">📹</span><h3>CCTV Installation</h3><p>High-definition safety for your peace of mind.</p></div>
+            <div class="card"><span class="icon">🛋️</span><h3>Interior Design</h3><p>Stylish, smart, and functional spaces.</p></div>
+            <div class="card"><span class="icon">🧯</span><h3>Fire Safety</h3><p>Professional fire alarm & safety installation.</p></div>
+        </div>
 
-        <!-- Contact Section -->
         <div class="contact-card">
-            <h2 class="section-title" style="text-align: left;">Sampark Karein</h2>
+            <h2 style="margin-bottom: 20px;">Sampark Karein</h2>
             <div class="contact-info">
                 <p><strong>Proprietor:</strong> Good Happy Enterprises</p>
                 <p><strong>Address:</strong> Royal City Colony, Bareilly - 243122</p>
-                <p><strong>Mobile:</strong> <a href="tel:+919458889596" style="color: #27ae60; text-decoration: none; font-weight: bold;">+91-9458889596</a></p>
+                <p><strong>Mobile:</strong> <a href="tel:+919458889596">+91-9458889596</a></p>
             </div>
         </div>
-
     </div>
 
     <footer>
-        <p>&copy; 2019 Good Happy Enterprises | Bareilly, Uttar Pradesh</p>
+        <p>&copy; 2019 Good Happy Enterprises | All Rights Reserved.</p>
     </footer>
 
 </body>
