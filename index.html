@@ -3,136 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Good Happy Enterprises</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <title>Good Happy Enterprises | Professional Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; }
-        body { background-color: #f0f2f5; color: #333; line-height: 1.8; }
+        body { background-color: #f8f9fa; color: #333; line-height: 1.6; }
 
-        /* Stylish Header with Glow Animation */
-        header { 
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
-            color: white; 
-            text-align: center; 
-            padding: 80px 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-
-        /* Business Name Animation */
-        header h1 { 
-            font-size: 3rem; 
-            margin-bottom: 10px; 
-            text-transform: uppercase; 
-            letter-spacing: 2px;
-            animation: glow 2s ease-in-out infinite alternate;
-        }
-
-        @keyframes glow {
-            from { text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073; }
-            to { text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6; }
-        }
-
-        header p { font-size: 1.2rem; color: #e0e0e0; }
-
-        .container { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
-
-        .section-title { text-align: center; font-size: 2.2rem; color: #333; margin-top: 40px; margin-bottom: 20px; }
-
-        /* Colorful Service Cards Grid */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 20px; margin-bottom: 50px; }
+        /* Professional Navigation Bar */
+        .navbar { background: #2c3e50; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .logo { color: white; font-weight: 600; font-size: 1.2rem; }
+        .menu-btn { cursor: pointer; font-size: 1.8rem; color: white; }
         
-        .card { 
-            background: white; padding: 25px; border-radius: 20px; 
-            box-shadow: 0 10px 20px rgba(0,0,0,0.08); 
-            transition: all 0.4s ease; text-align: center;
-        }
-        .card:hover { transform: translateY(-15px); box-shadow: 0 20px 30px rgba(0,0,0,0.15); }
-        .card h3 { color: #764ba2; margin-top: 10px; font-size: 1.2rem; }
-        .icon { font-size: 2.8rem; display: block; }
+        /* Mobile Menu */
+        .nav-links { display: none; position: absolute; top: 60px; right: 0; background: #34495e; width: 200px; padding: 20px; list-style: none; border-bottom-left-radius: 10px; }
+        .nav-links li { margin: 15px 0; }
+        .nav-links li a { color: white; text-decoration: none; font-size: 1.1rem; }
 
-        /* Detailed 500+ Words Section */
-        .detailed-section { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); margin-bottom: 40px; }
-        .detailed-section h2 { color: #764ba2; font-size: 2rem; margin-bottom: 25px; border-bottom: 3px solid #764ba2; display: inline-block; padding-bottom: 5px; }
-        .service-block { margin-bottom: 35px; border-left: 4px solid #764ba2; padding-left: 15px; }
-        .service-block h3 { color: #2c3e50; font-size: 1.3rem; margin-bottom: 8px; }
-        .service-block p { font-size: 1.05rem; color: #444; text-align: justify; }
+        /* Hero Section */
+        .hero { background: linear-gradient(135deg, #2c3e50, #4ca1af); color: white; text-align: center; padding: 60px 20px; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
 
-        /* Stylish Contact Card */
-        .contact-card { background: white; padding: 40px; border-radius: 20px; text-align: center; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-        .contact-info { font-size: 1.2rem; }
-        .contact-info a { color: #764ba2; text-decoration: none; font-weight: 600; transition: 0.3s; }
-        .contact-info a:hover { color: #667eea; }
+        .container { max-width: 1000px; margin: 30px auto; padding: 20px; }
 
-        footer { text-align: center; padding: 40px; color: #777; font-size: 0.9rem; }
+        /* Grid */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px; }
+        .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); text-align: center; border-bottom: 3px solid #4ca1af; }
+        .card h3 { font-size: 1rem; color: #2c3e50; }
+
+        /* Detailed Section */
+        .detailed-section { background: white; padding: 30px; border-radius: 10px; margin-top: 40px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .detailed-section h2 { color: #2c3e50; margin-bottom: 15px; }
+
+        footer { text-align: center; padding: 30px; background: #2c3e50; color: white; margin-top: 40px; }
     </style>
 </head>
 <body>
 
-    <header>
+    <!-- Professional Navigation -->
+    <nav class="navbar">
+        <div class="logo">Good Happy Enterprises</div>
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#services">हमारी सेवाएँ</a></li>
+            <li><a href="#about">विवरण</a></li>
+            <li><a href="#contact">संपर्क</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
         <h1>Good Happy Enterprises</h1>
-        <p>Premium Building, Interior, Security & Core Cutting Experts</p>
+        <p>Building | Construction | Interior | Security | Technical</p>
     </header>
 
-    <div class="container">
-        
-        <!-- 8 Services Cards Grid -->
-        <h2 class="section-title">Hamari Sewayein</h2>
+    <div class="container" id="services">
+        <h2 style="text-align:center;">हमारी प्रमुख सेवाएँ</h2>
         <div class="grid">
-            <div class="card"><span class="icon">🏗️</span><h3>Construction</h3></div>
-            <div class="card"><span class="icon">🎨</span><h3>House Painting</h3></div>
-            <div class="card"><span class="icon">📹</span><h3>CCTV Camera</h3></div>
-            <div class="card"><span class="icon">🛋️</span><h3>Interior Design</h3></div>
-            <div class="card"><span class="icon">🧯</span><h3>Fire Safety</h3></div>
-            <div class="card"><span class="icon">🪚</span><h3>RCC Cutting</h3></div>
-            <div class="card"><span class="icon">🔌</span><h3>AC Core Cutting</h3></div>
-            <div class="card"><span class="icon">🧱</span><h3>Brick Core Cutting</h3></div>
+            <div class="card"><h3>Construction</h3></div>
+            <div class="card"><h3>Painting</h3></div>
+            <div class="card"><h3>CCTV</h3></div>
+            <div class="card"><h3>Interior</h3></div>
+            <div class="card"><h3>Fire Safety</h3></div>
+            <div class="card"><h3>RCC Cutting</h3></div>
+            <div class="card"><h3>AC Core</h3></div>
+            <div class="card"><h3>Brick Core</h3></div>
         </div>
 
-        <!-- Detailed 500+ Words Hindi Content Section -->
-        <section class="detailed-section">
-            <h2>हमारी सेवाओं का विस्तृत विवरण</h2>
-            
-            <div class="service-block">
-                <h3>1. बिल्डिंग कंस्ट्रक्शन और डेवलपर्स</h3>
-                <p>हम सिर्फ इमारतें नहीं खड़ी करते, हम आपके सपनों को साकार करते हैं। हमारी निर्माण प्रक्रिया में आधुनिक इंजीनियरिंग, उच्च गुणवत्ता वाले स्टील और अनुभवी आर्किटेक्ट्स का मिश्रण होता है। हम हर प्रोजेक्ट को एक चुनौती मानकर उसे समय से पहले और पूरी मजबूती के साथ पूरा करते हैं।</p>
-            </div>
-
-            <div class="service-block">
-                <h3>2. House Painting (हाउस पेंटिंग)</h3>
-                <p>घर की रौनक उसके रंग-रोगन से होती है। हम न केवल दीवारों पर पेंट करते हैं, बल्कि दीवारों की नमी (Dampness) को दूर करने और उन्हें लंबे समय तक चमकता रखने के लिए प्रीमियम क्वालिटी के वाटरprooof पेंट्स का उपयोग करते हैं।</p>
-            </div>
-
-            <div class="service-block">
-                <h3>3. CCTV Camera Installation (सीसीटीवी कैमरा)</h3>
-                <p>सुरक्षा आज की सबसे बड़ी जरूरत है। हम हाई-डेफिनिशन नाइट-विजन कैमरों का इंस्टॉलेशन करते हैं जिन्हें आप दुनिया में कहीं से भी अपने मोबाइल पर लाइव देख सकते हैं। चाहे घर हो या दुकान, हम सुरक्षा के पक्के इंतजाम करते हैं।</p>
-            </div>
-
-            <div class="service-block">
-                <h3>4. Interior Design (इंटीरियर डिज़ाइन)</h3>
-                <p>आपका घर आपके व्यक्तित्व का आईना है। हम छोटे से छोटे स्पेस का स्मार्ट तरीके से उपयोग करते हैं। चाहे फॉल्स सीलिंग हो, मॉड्यूलर किचन हो या वार्डरोब, हम आपके स्पेस को स्टाइलिश, आधुनिक और बेहद आरामदायक (Functional) बनाते हैं।</p>
-            </div>
-
-            <div class="service-block">
-                <h3>5. Fire Safety Solutions (फायर सेफ्टी)</h3>
-                <p>आग से सुरक्षा के लिए लापरवाही की कोई जगह नहीं है। हम फायर अलार्म, ऑटोमैटिक स्प्रिंकलर सिस्टम और फायर हाइड्रेंट का इंस्टॉलेशन करते हैं। हमारी टीम फायर सेफ्टी के सभी सरकारी मानकों (Standards) को ध्यान में रखकर काम करती है।</p>
-            </div>
-
-            <div class="service-block">
-                <h3>6, 7 & 8. RCC, AC और ब्रिक कोर कटिंग</h3>
-                <p>यह हमारी सबसे बड़ी तकनीकी विशेषता है। अक्सर प्लंबिंग, इलेक्ट्रिकल या एसी पाइप के लिए लोग दीवारों को हथौड़े और छेनी से तोड़ते हैं, जिससे दीवार में दरारें आ जाती हैं और स्ट्रक्चर कमजोर होता है। हमारी 'कोर कटिंग' तकनीक से हम कंक्रीट के पिलर, स्लैब (RCC Cutting), एसी के पाइप होल (AC Core Cutting) और ईंटों की दीवारों (Brick Core Cutting) में बिना किसी वाइब्रेशन के बिल्कुल गोल, साफ और सटीक होल करते हैं। यह तकनीक स्ट्रक्चर को पूरी तरह सुरक्षित रखती है और काम में जबरदस्त फिनिशिंग लाती है।</p>
-            </div>
-            
-            <p style="text-align:center; font-weight:bold; margin-top:40px; color:#764ba2;">Good Happy Enterprises के साथ, आप पाते हैं—विश्वास, गुणवत्ता और आधुनिक समाधान।</p>
+        <section class="detailed-section" id="about">
+            <h2>सेवाओं का विस्तृत विवरण</h2>
+            <p><strong>1. बिल्डिंग कंस्ट्रक्शन और डेवलपर्स:</strong> हम सिर्फ इमारतें नहीं खड़ी करते, हम आपके सपनों को साकार करते हैं।</p>
+            <p><strong>2. हाउस पेंटिंग:</strong> प्रीमियम क्वालिटी के साथ दीवारों को नया और चमकदार लुक।</p>
+            <p><strong>3. सीसीटीवी कैमरा:</strong> हाई-डेफिनिशन सर्विलांस ताकि आपका घर रहे सुरक्षित।</p>
+            <p><strong>4. इंटीरियर डिज़ाइन:</strong> मॉडर्न, स्टाइलिश और आरामदायक स्पेस का निर्माण।</p>
+            <p><strong>5. फायर सेफ्टी:</strong> सरकारी मानकों के अनुसार फायर अलार्म और सुरक्षा उपकरण।</p>
+            <p><strong>6, 7 & 8. RCC, AC और ब्रिक कोर कटिंग:</strong> हमारी आधुनिक तकनीक से दीवारों को बिना तोड़े, बिना वाइब्रेशन के सटीक छेद। यह स्ट्रक्चर की मजबूती बनाए रखता है।</p>
         </section>
 
-        <!-- Contact Section -->
-        <div class="contact-card">
-            <h2 style="margin-bottom: 20px;">Sampark Karein</h2>
-            <div class="contact-info">
-                <p><strong>Proprietor:</strong> Good Happy Enterprises</p>
-                <p><strong>Address:</strong> Royal City Colony, Bareilly - 243122</p>
-                <p><strong>Mobile:</strong> <a href="tel:+919458889596">+91-9458889596</a></p>
-            </div>
+        <div class="detailed-section" id="contact" style="text-align:center;">
+            <h2>संपर्क करें</h2>
+            <p><strong>Proprietor:</strong> Good Happy Enterprises</p>
+            <p><strong>Mobile:</strong> <a href="tel:+919458889596" style="color:#4ca1af;">+91-9458889596</a></p>
         </div>
     </div>
 
@@ -140,5 +89,15 @@
         <p>&copy; 2019 Good Happy Enterprises | All Rights Reserved.</p>
     </footer>
 
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("navLinks");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+    </script>
 </body>
 </html>
