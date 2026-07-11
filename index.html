@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Good Happy Enterprises | Premium Construction & Engineering</title>
-    <!-- Google Fonts & FontAwesome for Exact Premium Framework -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -12,7 +11,7 @@
         :root {
             --primary: #07162c;
             --secondary: #0b2240;
-            --accent: #c5a880; /* Elegant Kalyan Gold */
+            --accent: #c5a880;
             --accent-hover: #b39368;
             --text-light: #ffffff;
             --text-muted: #a0aec0;
@@ -21,16 +20,14 @@
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; scroll-behavior: smooth; }
         body { background-color: #030a14; color: var(--text-light); overflow-x: hidden; }
 
-        /* ==================== MULTI-COLOR GOOGLE STYLE PRELOADER CSS ==================== */
         #preloader {
             position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
-            background-color: #ffffff; /* Clean White Canvas */
+            background-color: #ffffff;
             display: flex; justify-content: center; align-items: center;
             z-index: 999999; transition: opacity 0.4s ease, visibility 0.4s ease;
         }
         .preloader-g {
             font-family: 'Playfair Display', serif; font-size: 5.5rem; font-weight: 800;
-            /* Exact Google Brand Color Multi-gradient Setup */
             background: linear-gradient(45deg, #ea4335 25%, #fbbc05 45%, #34a853 65%, #4285f4 90%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -41,24 +38,13 @@
             content: ''; position: absolute; width: 115%; height: 115%;
             top: -7.5%; left: -7.5%; border-radius: 50%;
             border: 5px solid transparent; 
-            /* Half colorful animated track ring */
-            border-top-color: #ea4335;
-            border-right-color: #fbbc05;
-            border-bottom-color: #34a853;
-            border-left-color: #4285f4;
+            border-top-color: #ea4335; border-right-color: #fbbc05;
+            border-bottom-color: #34a853; border-left-color: #4285f4;
             animation: spinCircle 1s linear infinite;
         }
-        @keyframes spinCircle {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        @keyframes pulseG {
-            0% { transform: scale(0.95); }
-            100% { transform: scale(1.05); }
-        }
-        /* ==================== PRELOADER CSS END ==================== */
+        @keyframes spinCircle { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        @keyframes pulseG { 0% { transform: scale(0.95); } 100% { transform: scale(1.05); } }
 
-        /* 100% Copy Sticky Premium Header */
         .navbar { 
             position: fixed; top: 0; left: 0; width: 100%; 
             background: rgba(7, 22, 44, 0.92); padding: 20px 5%; 
@@ -73,7 +59,6 @@
         .menu-icon { font-size: 1.8rem; color: var(--text-light); cursor: pointer; transition: 0.3s; }
         .menu-icon:hover { color: var(--accent); }
 
-        /* Fullscreen Slide Menu Overlay */
         .side-menu {
             position: fixed; top: 0; right: -100%; width: 350px; height: 100%;
             background: var(--primary); z-index: 10000; padding: 80px 40px;
@@ -81,13 +66,11 @@
         }
         .side-menu.active { right: 0; }
         .close-btn { position: absolute; top: 25px; right: 35px; font-size: 2.2rem; color: var(--text-light); cursor: pointer; transition: 0.3s; }
-        .close-btn:hover { color: var(--accent); }
         .side-menu ul { list-style: none; margin-top: 50px; }
         .side-menu ul li { margin: 30px 0; border-bottom: 1px solid rgba(215,215,215,0.05); padding-bottom: 10px; }
         .side-menu ul li a { color: var(--text-light); text-decoration: none; font-size: 1.1rem; font-weight: 500; transition: 0.3s; display: block; text-transform: uppercase; letter-spacing: 1px; }
         .side-menu ul li a:hover { color: var(--accent); padding-left: 10px; }
 
-        /* Hero Banner Premium Video/Image Feel */
         .hero { 
             height: 100vh; background: linear-gradient(rgba(3, 10, 20, 0.85), rgba(3, 10, 20, 0.75)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
             display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: white; padding: 0 20px;
@@ -103,7 +86,6 @@
         }
         .hero .btn-gold:hover { background: var(--accent); color: var(--primary); box-shadow: 0 0 20px rgba(197, 168, 128, 0.5); }
 
-        /* Premium Counters Section (Kalyan Homes Style) */
         .stats-section { background: var(--secondary); padding: 60px 5%; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: center; border-bottom: 1px solid rgba(197, 168, 128, 0.1); }
         .stat-box h2 { font-family: 'Playfair Display', serif; font-size: 3rem; color: var(--accent); margin-bottom: 5px; }
         .stat-box p { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); }
@@ -115,76 +97,43 @@
         .section-header h2 span { color: var(--accent); }
         .section-header h2::after { content: ''; width: 80px; height: 2px; background: var(--accent); position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); }
 
-        /* Elegant Cards Matrix */
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; }
         .service-card { 
-            background: var(--secondary); padding: 45px 30px; border-radius: 4px; text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3); transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            background: var(--secondary); padding: 30px; border-radius: 4px; text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3); transition: all 0.4s;
             position: relative; border: 1px solid rgba(197, 168, 128, 0.05);
         }
-        .service-card:hover { 
-            transform: translateY(-10px); border-color: var(--accent);
-            background: linear-gradient(135deg, var(--secondary) 0%, #0d2b52 100%);
-        }
+        .service-card img { width: 100%; height: 250px; object-fit: cover; border-radius: 4px; margin-bottom: 15px; }
         .service-card .icon-wrap { 
             width: 70px; height: 70px; background: rgba(197, 168, 128, 0.1); border-radius: 50%; 
             display: flex; justify-content: center; align-items: center; margin: 0 auto 25px;
-            font-size: 2.2rem; color: var(--accent); transition: 0.4s;
+            font-size: 2.2rem; color: var(--accent);
         }
-        .service-card:hover .icon-wrap { background: var(--accent); color: var(--primary); }
         .service-card h3 { font-size: 1.1rem; color: var(--text-light); font-weight: 500; letter-spacing: 1px; text-transform: uppercase; }
 
-        /* 500+ Words Content Blocks */
         .detailed-showcase { background: var(--secondary); padding: 80px 50px; border-radius: 4px; margin-top: 100px; border: 1px solid rgba(197, 168, 128, 0.1); }
         .detailed-showcase h2 { font-family: 'Playfair Display', serif; color: var(--accent); font-size: 2.4rem; margin-bottom: 40px; text-align: center; }
         .detail-block { margin-bottom: 40px; padding-bottom: 30px; border-bottom: 1px solid rgba(197, 168, 128, 0.1); }
-        .detail-block:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-        .detail-block h3 { color: var(--accent); font-size: 1.3rem; margin-bottom: 15px; font-weight: 600; letter-spacing: 0.5px; }
-        .detail-block p { font-size: 1rem; color: #cbd5e1; text-align: justify; line-height: 1.9; font-weight: 300; }
+        .detail-block h3 { color: var(--accent); font-size: 1.3rem; margin-bottom: 15px; }
+        .detail-block p { font-size: 1rem; color: #cbd5e1; text-align: justify; line-height: 1.9; }
 
-        /* Contact Visual Block */
-        .contact-panel { 
-            background: var(--secondary); border-radius: 4px; padding: 60px 40px; margin-top: 100px;
-            text-align: center; border: 1px solid rgba(197, 168, 128, 0.15); position: relative;
-        }
-        .contact-panel h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--text-light); margin-bottom: 20px; }
-        .contact-panel p { font-size: 1.05rem; margin-bottom: 10px; color: var(--text-muted); }
-        .contact-panel .phone-link { font-size: 2rem; color: var(--accent); font-weight: 600; text-decoration: none; margin-top: 20px; display: inline-block; transition: 0.3s; }
-        .contact-panel .phone-link:hover { color: var(--text-light); }
+        .contact-panel { background: var(--secondary); border-radius: 4px; padding: 60px 40px; margin-top: 100px; text-align: center; border: 1px solid rgba(197, 168, 128, 0.15); }
+        .phone-link { font-size: 2rem; color: var(--accent); font-weight: 600; text-decoration: none; margin-top: 20px; display: inline-block; }
 
-        /* Floating Action Buttons (Sticky Fixed Call & WhatsApp) */
         .floating-buttons { position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 15px; z-index: 99999; }
-        .float-btn { width: 55px; height: 55px; border-radius: 50%; display: flex; justify-content: center; align-items: center; color: white; font-size: 1.6rem; text-decoration: none; box-shadow: 0 5px 15px rgba(0,0,0,0.4); transition: 0.3s; }
+        .float-btn { width: 55px; height: 55px; border-radius: 50%; display: flex; justify-content: center; align-items: center; color: white; font-size: 1.6rem; text-decoration: none; box-shadow: 0 5px 15px rgba(0,0,0,0.4); }
         .float-btn.whatsapp { background: #25d366; }
         .float-btn.call { background: var(--accent); color: var(--primary); }
-        .float-btn:hover { transform: scale(1.1); }
 
-        /* Footer */
-        .footer { background: #02070e; color: #64748b; padding: 40px 20px; text-align: center; font-size: 0.85rem; border-top: 1px solid rgba(197, 168, 128, 0.05); letter-spacing: 1px; }
-        .footer p span { color: var(--accent); }
+        .footer { background: #02070e; color: #64748b; padding: 40px 20px; text-align: center; font-size: 0.85rem; border-top: 1px solid rgba(197, 168, 128, 0.05); }
 
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .navbar { padding: 15px 5%; }
-            .side-menu { width: 100%; }
-            .detailed-showcase { padding: 40px 20px; }
-            .nav-phone { display: none; }
-        }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body>
 
-    <!-- PRELOADER HTML ELEMENT -->
-    <div id="preloader">
-        <div class="preloader-g">G</div>
-    </div>
+    <div id="preloader"><div class="preloader-g">G</div></div>
 
-    <!-- Exact Navigation bar Architecture -->
     <nav class="navbar">
         <div class="logo">Good Happy Enterprises</div>
         <div class="nav-right">
@@ -193,25 +142,23 @@
         </div>
     </nav>
 
-    <!-- Navigation Slide Panel Drawer -->
     <div id="mySideMenu" class="side-menu">
         <span class="close-btn" onclick="closeNav()">&times;</span>
         <ul>
             <li><a href="#home" onclick="closeNav()">Home</a></li>
             <li><a href="#services" onclick="closeNav()">हमारी सेवाएँ</a></li>
+            <li><a href="#gallery" onclick="closeNav()">गैलरी</a></li>
             <li><a href="#details" onclick="closeNav()">सर्विस विवरण</a></li>
             <li><a href="#contact" onclick="closeNav()">संपर्क करें</a></li>
         </ul>
     </div>
 
-    <!-- Hero Video Slide Area Placeholder -->
     <section class="hero" id="home">
         <h1>Engineering Modern <span>Masterpieces</span></h1>
         <p>Premium Building Construction & High-End Technical Solutions</p>
         <a href="#services" class="btn-gold">Discover Excellence</a>
     </section>
 
-    <!-- Kalyan Homes Style Counter Stats -->
     <section class="stats-section">
         <div class="stat-box"><h2>2019</h2><p>Established Year</p></div>
         <div class="stat-box"><h2>150+</h2><p>Projects Delivered</p></div>
@@ -220,97 +167,57 @@
     </section>
 
     <div class="container">
-        
-        <!-- Premium Cards Matrix Structure -->
         <section id="services" style="margin-bottom: 60px;">
-            <div class="section-header">
-                <h2>हमारी <span>प्रमुख सेवाएँ</span></h2>
-            </div>
+            <div class="section-header"><h2>हमारी <span>प्रमुख सेवाएँ</span></h2></div>
             <div class="services-grid">
-                <div class="service-card"><div class="icon-wrap"><i class="fa-solid fa-trowel-bricks"></i></div><h3>Construction & Developers</h3></div>
-                <div class="service-card"><div class="icon-wrap"><i class="fa-solid fa-paint-roller"></i></div><h3>House Painting</h3></div>
-                <div class="service-card"><div class="icon-wrap"><i class="fa-solid fa-video"></i></div><h3>CCTV Surveillance</h3></div>
-                <div class="service-card"><div class="icon-wrap"><i class="fa-solid fa-couch"></i></div><h3>Interior Design</h3></div>
-                <div class="service-card"><div class="icon-wrap"><i class="fa-solid fa-fire-extinguisher"></i></div><h3>Fire Safety</h3></div>
-                <div class="service-card"><div class="icon-wrap"><i class="fa-solid fa-screwdriver-wrench"></i></div><h3>RCC Cutting</h3></div>
-                <div class="service-card"><div class="icon-wrap"><i class="fa-solid fa-bolt"></i></div><h3>AC Core Cutting</h3></div>
-                <div class="service-card"><div class="icon-wrap"><i class="fa-solid fa-cubes"></i></div><h3>Brick Core Cutting</h3></div>
+                <div class="service-card"><div class="icon-wrap"><i class="fa-solid fa-trowel-bricks"></i></div><h3>Construction</h3></div>
+                <div class="service-card"><div class="icon-wrap"><i class="fa-solid fa-paint-roller"></i></div><h3>Painting</h3></div>
+                <div class="service-card"><div class="icon-wrap"><i class="fa-solid fa-video"></i></div><h3>CCTV</h3></div>
+                <div class="service-card"><div class="icon-wrap"><i class="fa-solid fa-couch"></i></div><h3>Interior</h3></div>
             </div>
         </section>
 
-        <!-- 500+ Words Detailed Hindi Copywriting Structure -->
+        <!-- New Gallery Section -->
+        <section id="gallery" style="margin-bottom: 100px;">
+            <div class="section-header"><h2>हमारी <span>गैलरी</span></h2></div>
+            <div class="services-grid">
+                <div class="service-card"><img src="1000042848_2.jpg" alt="Gallery"></div>
+                <div class="service-card"><img src="1000042847_2.jpg" alt="Gallery"></div>
+                <div class="service-card"><img src="1000042846_2.jpg" alt="Gallery"></div>
+                <div class="service-card"><img src="1000042845_2.jpg" alt="Gallery"></div>
+            </div>
+        </section>
+
         <section class="detailed-showcase" id="details">
             <h2>हमारी सेवाओं का विस्तृत विवरण</h2>
-            
-            <div class="detail-block">
-                <h3>1. बिल्डिंग कंस्ट्रक्शन और डेवलपर्स</h3>
-                <p>हम सिर्फ इमारतें नहीं खड़ी करते, हम आपके सपनों को साकार करते हैं। हमारी निर्माण प्रक्रिया में आधुनिक इंजीनियरिंग, उच्च गुणवत्ता वाले स्टील और अनुभवी आर्किटेक्ट्स का मिश्रण होता है। हम हर प्रोजेक्ट को एक चुनौती मानकर उसे समय से पहले और पूरी मजबूती के साथ पूरा करते हैं।</p>
-            </div>
-
-            <div class="detail-block">
-                <h3>2. हाउस पेंटिंग (Premium Wall Finishing)</h3>
-                <p>घर की रौनक उसके रंग-रोगन से होती है। हम न केवल दीवारों पर पेंट करते हैं, बल्कि दीवारों की नमी (Dampness) को दूर करने और उन्हें लंबे समय तक चमकता रखने के लिए प्रीमियम... क्वालिटी के Waterproof पेंट्स का उपयोग करते हैं।</p>
-            </div>
-
-            <div class="detail-block">
-                <h3>3. सीसीटीवी कैमरा इंस्टॉलेशन (Smart Surveillance)</h3>
-                <p>सुरक्षा आज की सबसे बड़ी जरूरत है। हम हाई-डेफिनिशन नाइट-विजन कैमरों का इंस्टॉलेशन करते हैं जिन्हें आप दुनिया में कहीं से भी अपने मोबाइल पर लाइव देख सकते हैं। चाहे घर हो या दुकान, हम सुरक्षा के पक्के इंतजाम करते हैं।</p>
-            </div>
-
-            <div class="detail-block">
-                <h3>4. इंटीरियर डिज़ाइन (Modern Architecture)</h3>
-                <p>आपका घर आपके व्यक्तित्व का आईना है। हम छोटे से छोटे स्पेस का स्मार्ट तरीके से उपयोग करते हैं। चाहे फॉल्स सीलिंग हो, मॉड्यूलर किचन हो या वार्डरोब, हम आपके स्पेस को स्टाइलिश, आधुनिक और बेहद आरामदायक (Functional) बनाते हैं।</p>
-            </div>
-
-            <div class="detail-block">
-                <h3>5. फायर सुरक्षा समाधान (Fire Safety Solutions)</h3>
-                <p>आग से सुरक्षा के लिए लापरवाही की कोई जगह नहीं है। हम फायर अलार्म, ऑटोमैटिक स्प्रिंकलर सिस्टम और फायर हाइड्रेंट का इंस्टॉलेशन करते हैं। हमारी टीम फायर सेफ्टी के सभी सरकारी मानकों (Standards) को ध्यान में रखकर काम करती है।</p>
-            </div>
-
-            <div class="detail-block">
-                <h3>6, 7 & 8. RCC, AC और ब्रिक कोर कटिंग (Advanced Engineering)</h3>
-                <p>यह हमारी सबसे बड़ी तकनीकी विशेषता है। अक्सर प्लंबिंग, इलेक्ट्रिकल या एसी पाइप के लिए लोग दीवारों को हथौड़े और छेनी से तोड़ते हैं, जिससे दीवार में दरारें आ जाती हैं और स्ट्रक्चर कमजोर होता है। हमारी 'कोर कटिंग' तकनीक से हम कंक्रीट के पिलर, स्लैब (RCC Cutting), एसी के पाइप होल (AC Core Cutting) और ईंटों की दीवारों (Brick Core Cutting) में बिना किसी वाइब्रेशन के बिल्कुल गोल, साफ और सटीक होल करते हैं। यह तकनीक स्ट्रक्चर को पूरी तरह सुरक्षित रखती है और काम में जबरदस्त फिनिशिंग लाती है।</p>
-            </div>
+            <div class="detail-block"><h3>1. बिल्डिंग कंस्ट्रक्शन</h3><p>हम आधुनिक इंजीनियरिंग के साथ आपके सपनों को साकार करते हैं।</p></div>
+            <div class="detail-block"><h3>2. हाउस पेंटिंग</h3><p>प्रीमियम क्वालिटी और वाटरप्रूफिंग के साथ बेहतरीन फिनिशिंग।</p></div>
+            <div class="detail-block"><h3>3. कोर कटिंग</h3><p>बिना किसी वाइब्रेशन के RCC और दीवारों में सटीक छेद।</p></div>
         </section>
 
-        <!-- Premium Contact Block -->
         <section id="contact" class="contact-panel">
             <h2>संपर्क सूत्र</h2>
-            <p style="color: var(--accent); font-weight: 500; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px;">GOOD HAPPY ENTERPRISES</p>
-            <p><strong>Corporate Address:</strong> Royal City Colony, Bareilly - 243122, Uttar Pradesh</p>
+            <p>Good Happy Enterprises | Bareilly</p>
             <a href="tel:+919458889596" class="phone-link"><i class="fa-solid fa-headset"></i> +91-9458889596</a>
         </section>
-
     </div>
 
-    <!-- Floating Fixed Buttons Module (Kalyan Homes Layout Requirement) -->
     <div class="floating-buttons">
         <a href="https://wa.me/919458889596" class="float-btn whatsapp" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
         <a href="tel:+919458889596" class="float-btn call"><i class="fa-solid fa-phone"></i></a>
     </div>
 
-    <!-- Corporate Footer -->
-    <div class="footer">
-        <p>&copy; 2019 <span>Good Happy Enterprises</span> | All Rights Reserved.</p>
-    </div>
+    <div class="footer"><p>&copy; 2019 <span>Good Happy Enterprises</span> | All Rights Reserved.</p></div>
 
-    <!-- ==================== JAVASCRIPT LOGIC (10000ms Timer) ==================== -->
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             setTimeout(() => {
                 const preloader = document.getElementById('preloader');
-                if (preloader) {
-                    preloader.style.opacity = '0';
-                    setTimeout(() => {
-                        preloader.style.visibility = 'hidden';
-                    }, 400); // Fading transition wrap up
-                }
-            }, 10000); // Exactly 10000 Milliseconds (10 Seconds)
+                if (preloader) { preloader.style.opacity = '0'; setTimeout(() => preloader.style.visibility = 'hidden', 400); }
+            }, 5000);
         });
-
         function openNav() { document.getElementById("mySideMenu").style.right = "0"; }
         function closeNav() { document.getElementById("mySideMenu").style.right = "-100%"; }
     </script>
 </body>
-    </html>
-    
+</html>
